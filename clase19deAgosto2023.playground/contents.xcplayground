@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <playground version='6.0' target-platform='ios' buildActiveScheme='true' importAppTypes='true'>
     <pages>
-        <page name='Untitled Page 1'/>
-        <page name='Untitled Page 2'/>
-        <page name='Untitled Page 3'/>
-        <page name='Untitled Page 4'/>
-        <page name='Untitled Page 5'/>
-        <page name='Untitled Page 6'/>
-        <page name='Untitled Page 7'/>
-        <page name='Untitled Page 8'/>
-        <page name='Untitled Page 9'/>
+        <page name='1EjemploIF'/>
+        <page name='2EjemploSwitch'/>
+        <page name='3_EjercicioSwitch'/>
+        <page name='4EjemploOptionals'/>
+        <page name='5EjemploEnumerations'/>
+        <page name='6EjemploFor'/>
+        <page name='7EjemploWhile'/>
+        <page name='8PrimeraIteracion'/>
+        <page name='9_EjercicioSerpientesEscaleras'/>
+        <page name='10Enum'/>
+        <page name='10_Ecuación'/>
+        <page name='11 Struct y clase'/>
     </pages>
 </playground>
