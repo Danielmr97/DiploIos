@@ -30,3 +30,20 @@ var danteClone = dante
 danteClone.isAdopter = false
 print(dante.isAdopter)
 print(danteClone.isAdopter)
+
+
+class Vehicle {
+    var wheels : Int?
+    
+    init (wheels : Int){
+        self.wheels = wheels
+    }
+}
+
+//class Scooter : Vehicle{
+//    var color : String
+//    
+//}
+//
+//let myVehicle = Scooter()
+//
