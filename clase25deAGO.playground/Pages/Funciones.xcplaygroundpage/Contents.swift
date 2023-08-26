@@ -107,3 +107,5 @@ func greetByMiddleNamse(fromFullName name : (firt: String, middle : String?, las
 }
 greetByMiddleNamse(fromFullName: (firt: "Daniel", middle: nil, last: "pedro" ))
 
+//https://github.com/Diplomado-7a-generacion/functions-exercises-Danielmr97/actions/runs/5982470108/job/16231590685#step:3:26
+
