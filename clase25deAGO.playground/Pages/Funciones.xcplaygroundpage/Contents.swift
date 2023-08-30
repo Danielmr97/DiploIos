@@ -12,7 +12,7 @@ printWelcomeMessage(to: "Alejandro", course: "Diplomado Android")
 //LLamando el valor por defecto y solo ingresando nombre
 printWelcomeMessage(to: "PEPE")
 
-print("----------------------------------------------------")
+print("-----------------------------------------------------")
 print("\nParametro inout")
 //Funciones con parametro inout
 var error = "The porcess failed: "
