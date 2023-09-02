@@ -5,7 +5,7 @@ import XCTest
 class MyTest: XCTestCase {
 
     func getFullName(_ nameTuple : (String, String?, String, String? ))-> String {
-        //          N1                    E1                              N2                     E2               E3                             N3
+        //          N0                    E0                              N1          E1     N2                   E2                             N3
         return nameTuple.0 + (nameTuple.1 != nil ? " " : "") + (nameTuple.1 ?? "") + " " + nameTuple.2 + (nameTuple.3 != nil ? " " : "") + "\(nameTuple.3 ?? "")"
     }
     
