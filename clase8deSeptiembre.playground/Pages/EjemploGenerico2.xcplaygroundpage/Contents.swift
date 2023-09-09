@@ -75,7 +75,7 @@ struct Stack2<Element> : Sequence {
     
     mutating func pushAll  <S: Sequence >(_ sequence : S) where S.Element == Element{
         for item in sequence {
-            self.push(item)
+            self.push(item )
         }
     }
 
