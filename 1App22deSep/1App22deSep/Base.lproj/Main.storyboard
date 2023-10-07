@@ -238,8 +238,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Gxc-ib-MR5">
-                                <rect key="frame" x="59" y="59" width="275" height="137.66666666666666"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="59" y="78.999999999999986" width="275" height="137.66666666666663"/>
+                                <color key="backgroundColor" systemColor="systemMintColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Gxc-ib-MR5" secondAttribute="height" multiplier="2:1" id="REb-HQ-EFS"/>
                                 </constraints>
@@ -249,12 +249,15 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6l-90-xj5">
-                                <rect key="frame" x="161.66666666666666" y="216.66666666666666" width="70" height="35"/>
+                                <rect key="frame" x="161.66666666666666" y="236.66666666666666" width="70" height="34.999999999999972"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="i6l-90-xj5" secondAttribute="height" multiplier="2:1" id="knN-zB-3Le"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="SEND" cornerStyle="medium"/>
+                                <connections>
+                                    <action selector="SendInfoButton:" destination="80A-6x-BTK" eventType="touchUpInside" id="43d-yX-6cZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4MP-co-5eM"/>
@@ -264,7 +267,7 @@
                             <constraint firstItem="i6l-90-xj5" firstAttribute="top" secondItem="Gxc-ib-MR5" secondAttribute="bottom" constant="20" id="D0V-LN-Qtm"/>
                             <constraint firstItem="i6l-90-xj5" firstAttribute="centerX" secondItem="fTb-Tg-HBP" secondAttribute="centerX" id="NZ4-E3-LIh"/>
                             <constraint firstItem="Gxc-ib-MR5" firstAttribute="centerX" secondItem="fTb-Tg-HBP" secondAttribute="centerX" id="dZw-Dw-eDN"/>
-                            <constraint firstItem="Gxc-ib-MR5" firstAttribute="top" secondItem="4MP-co-5eM" secondAttribute="top" id="iPg-pF-DM4"/>
+                            <constraint firstItem="Gxc-ib-MR5" firstAttribute="top" secondItem="4MP-co-5eM" secondAttribute="top" constant="20" id="iPg-pF-DM4"/>
                         </constraints>
                     </view>
                     <connections>
@@ -356,6 +359,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
