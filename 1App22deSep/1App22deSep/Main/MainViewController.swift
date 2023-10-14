@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,12 +24,26 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func nextButtonTapped(_ sender: UIButton) {
-        if sender.tag == 1 {
-            performSegue(withIdentifier: "SegueFromMainToPhotos", sender: nil)
+        if sender.tag == 0 {
+            segueToInfo()
         }
         else{
-            performSegue(withIdentifier: "SegueFromMainToInfo", sender: nil)
+            segueForPhoto()
         }
+    }
+    func segueForPhoto(){
+        guard let photosViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ImageStackViewController") as? ImageStackViewController else {return}
+        photosViewController.showCat = phoroTypeSwitch.isOn
+        if switchTexfielEdit.isOn{
+            photosViewController.title = titleTextField.text
+        }
+        navigationController?.pushViewController(photosViewController, animated: true)
+    }
+    
+    func segueToInfo(){
+        let infoViewControler = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "infoViewControler")
+        infoViewControler.title = "Info"
+        navigationController?.pushViewController(infoViewControler, animated: true)
     }
     
     @IBAction func switchTexfieldEdit(_ sender: UISwitch) {
@@ -43,19 +57,10 @@ class ViewController: UIViewController {
         titlteLabel.text = sender.text
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destinationViewController  = segue.destination as? ImageStackViewController {
-            destinationViewController.showCat = phoroTypeSwitch.isOn
-            switchTexfielEdit.isOn ? (
-                destinationViewController.title = titleTextField.text) : (destinationViewController.title = "")
-        }else {
-            segue.destination.title = "Info"
-        }
-    }
     
 }
 
-extension ViewController : UITextFieldDelegate{
+extension MainViewController : UITextFieldDelegate{
     //Validar lo que puede traer un textfield
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if switchTexfielEdit.isOn == false{
