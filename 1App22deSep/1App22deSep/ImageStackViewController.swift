@@ -17,13 +17,13 @@ class ImageStackViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if showCat {
-            firtCaptionedImageView.imageView.image = UIImage(named: "images-2")
-            secondCaptionedImageView.imageView.image = UIImage(named: "images-3")
-            thirdCaptionedImageVIew.imageView.image = UIImage(named: "images-4")
+            firtCaptionedImageView.setContent(image: "images-2", caption: "images-2")
+            secondCaptionedImageView.setContent(image: "images-3", caption: "images-3")
+            thirdCaptionedImageVIew.setContent(image: "images-4", caption: "images-4")
         } else {
-            firtCaptionedImageView.imageView.image = UIImage(named: "perro-2")
-            secondCaptionedImageView.imageView.image = UIImage(named: "perro-1")
-            thirdCaptionedImageVIew.imageView.image = UIImage(named: "perro-3")
+            firtCaptionedImageView.setContent(image: "perro-2", caption: "perro-2")
+            secondCaptionedImageView.setContent(image: "perro-1", caption: "perro-1")
+            thirdCaptionedImageVIew.setContent(image: "perro-3", caption: "perro-3")
         }
     }
     

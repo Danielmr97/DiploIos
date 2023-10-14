@@ -23,9 +23,14 @@ class CaptionedImage: UIView {
         setUpView()
     }
     
+    func setContent(image : String, caption: String?){
+        captionLabel.text = caption
+        captionLabel.isHighlighted = caption == nil
+        imageView.image = UIImage(named: image)
+    }
+    
     private func setUpView(){
-        guard let contentView =  Bundle.main.loadNibNamed("CaptionedImage", owner: self)?.first as? UIView else
-        {return}
+        guard let contentView =  Bundle.main.loadNibNamed("CaptionedImage", owner: self)?.first as? UIView else {return}
         contentView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(contentView)
         topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
