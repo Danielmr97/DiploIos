@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TwitModallViewController: UIViewController {
+class shareViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         MessageTexView.text = ""
@@ -30,7 +30,7 @@ class TwitModallViewController: UIViewController {
     }
 }
 
-extension TwitModallViewController : UITextViewDelegate {
+extension shareViewController : UITextViewDelegate {
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         

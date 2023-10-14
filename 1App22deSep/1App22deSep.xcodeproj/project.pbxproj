@@ -17,7 +17,7 @@
 		BF299D222ABE4AFE00B327A0 /* _App22deSepUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF299D212ABE4AFE00B327A0 /* _App22deSepUITestsLaunchTests.swift */; };
 		BF299D2F2ABE543F00B327A0 /* MySecondLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF299D2E2ABE543F00B327A0 /* MySecondLaunchScreen.storyboard */; };
 		BF47CC872AC78AA500AB1DEF /* ImageStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF47CC862AC78AA400AB1DEF /* ImageStackViewController.swift */; };
-		BF47CC892AC7C4C000AB1DEF /* TwitModallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF47CC882AC7C4BF00AB1DEF /* TwitModallViewController.swift */; };
+		BF47CC892AC7C4C000AB1DEF /* shareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF47CC882AC7C4BF00AB1DEF /* shareViewController.swift */; };
 		BF587D142ABE8007003C25BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF587D132ABE8007003C25BC /* Assets.xcassets */; };
 		BF6B36DD2ADA1DE8005BAA65 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF6B36DC2ADA1DE8005BAA65 /* MainViewController.xib */; };
 		BF82943D2AD9FB8C00748B7F /* CaptionedImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF82943C2AD9FB8C00748B7F /* CaptionedImage.xib */; };
@@ -56,7 +56,7 @@
 		BF299D212ABE4AFE00B327A0 /* _App22deSepUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _App22deSepUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BF299D2E2ABE543F00B327A0 /* MySecondLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MySecondLaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF47CC862AC78AA400AB1DEF /* ImageStackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStackViewController.swift; sourceTree = "<group>"; };
-		BF47CC882AC7C4BF00AB1DEF /* TwitModallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitModallViewController.swift; sourceTree = "<group>"; };
+		BF47CC882AC7C4BF00AB1DEF /* shareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shareViewController.swift; sourceTree = "<group>"; };
 		BF587D132ABE8007003C25BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF6B36DC2ADA1DE8005BAA65 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		BF82943C2AD9FB8C00748B7F /* CaptionedImage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CaptionedImage.xib; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 				BF299D0C2ABE4AFD00B327A0 /* Info.plist */,
 				BF299D2E2ABE543F00B327A0 /* MySecondLaunchScreen.storyboard */,
 				BF47CC862AC78AA400AB1DEF /* ImageStackViewController.swift */,
-				BF47CC882AC7C4BF00AB1DEF /* TwitModallViewController.swift */,
+				BF47CC882AC7C4BF00AB1DEF /* shareViewController.swift */,
 				BF8294402AD9FE8B00748B7F /* CaptionedImage */,
 			);
 			path = 1App22deSep;
@@ -299,7 +299,7 @@
 				BF47CC872AC78AA500AB1DEF /* ImageStackViewController.swift in Sources */,
 				BF299CFF2ABE4AFB00B327A0 /* AppDelegate.swift in Sources */,
 				BF299D012ABE4AFB00B327A0 /* SceneDelegate.swift in Sources */,
-				BF47CC892AC7C4C000AB1DEF /* TwitModallViewController.swift in Sources */,
+				BF47CC892AC7C4C000AB1DEF /* shareViewController.swift in Sources */,
 				BF82943F2AD9FE6400748B7F /* CaptionedImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -92,11 +92,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="U1j-h7-BUh">
-                        <barButtonItem key="rightBarButtonItem" image="square.and.arrow.up.fill" catalog="system" id="EHe-um-yfr">
-                            <connections>
-                                <segue destination="80A-6x-BTK" kind="presentation" id="GDs-4G-j3W"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="square.and.arrow.up.fill" catalog="system" id="EHe-um-yfr"/>
                     </navigationItem>
                     <connections>
                         <outlet property="firtCaptionedImageView" destination="ACU-Md-9Lj" id="zTr-mw-jyJ"/>
@@ -107,56 +103,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uqS-Ni-77D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2166" y="-232"/>
-        </scene>
-        <!--Twit Modall View Controller-->
-        <scene sceneID="3hl-OS-2xS">
-            <objects>
-                <viewController id="80A-6x-BTK" customClass="TwitModallViewController" customModule="_App22deSep" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fTb-Tg-HBP">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Gxc-ib-MR5">
-                                <rect key="frame" x="59" y="78.999999999999986" width="275" height="137.66666666666663"/>
-                                <color key="backgroundColor" systemColor="systemMintColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Gxc-ib-MR5" secondAttribute="height" multiplier="2:1" id="REb-HQ-EFS"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6l-90-xj5">
-                                <rect key="frame" x="161.66666666666666" y="236.66666666666666" width="70" height="34.999999999999972"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="i6l-90-xj5" secondAttribute="height" multiplier="2:1" id="knN-zB-3Le"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="SEND" cornerStyle="medium"/>
-                                <connections>
-                                    <action selector="SendInfoButton:" destination="80A-6x-BTK" eventType="touchUpInside" id="43d-yX-6cZ"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="4MP-co-5eM"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Gxc-ib-MR5" firstAttribute="width" secondItem="4MP-co-5eM" secondAttribute="width" multiplier="0.7" id="1iF-aq-9Js"/>
-                            <constraint firstItem="i6l-90-xj5" firstAttribute="top" secondItem="Gxc-ib-MR5" secondAttribute="bottom" constant="20" id="D0V-LN-Qtm"/>
-                            <constraint firstItem="i6l-90-xj5" firstAttribute="centerX" secondItem="fTb-Tg-HBP" secondAttribute="centerX" id="NZ4-E3-LIh"/>
-                            <constraint firstItem="Gxc-ib-MR5" firstAttribute="centerX" secondItem="fTb-Tg-HBP" secondAttribute="centerX" id="dZw-Dw-eDN"/>
-                            <constraint firstItem="Gxc-ib-MR5" firstAttribute="top" secondItem="4MP-co-5eM" secondAttribute="top" constant="20" id="iPg-pF-DM4"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="MessageTexView" destination="Gxc-ib-MR5" id="42s-K3-YPd"/>
-                        <outlet property="SendingButton" destination="i6l-90-xj5" id="KgW-vY-0ga"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jnh-ML-zaV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3151" y="-207"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="q5r-u0-LU1">
@@ -204,17 +150,11 @@
         <image name="images-2" width="287" height="175"/>
         <image name="images-3" width="275" height="183"/>
         <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemMintColor">
-            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
