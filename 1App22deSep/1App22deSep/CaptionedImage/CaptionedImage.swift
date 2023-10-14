@@ -12,7 +12,6 @@ class CaptionedImage: UIView {
     @IBOutlet weak var captionLabel : UILabel!
     @IBOutlet weak var imageView : UIImageView!
     
-    @IBOutlet weak var contentView: UIView!
     
     override init (frame: CGRect){
         super.init(frame: frame)
@@ -25,7 +24,8 @@ class CaptionedImage: UIView {
     }
     
     private func setUpView(){
-        Bundle.main.loadNibNamed("CaptionedImage", owner: self)
+        guard let contentView =  Bundle.main.loadNibNamed("CaptionedImage", owner: self)?.first as? UIView else
+        {return}
         contentView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(contentView)
         topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true

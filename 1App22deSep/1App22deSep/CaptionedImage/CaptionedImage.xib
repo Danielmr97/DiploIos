@@ -10,7 +10,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CaptionedImage" customModule="_App22deSep" customModuleProvider="target">
             <connections>
                 <outlet property="captionLabel" destination="bWU-4k-xvA" id="Q2l-iI-I7m"/>
-                <outlet property="contentView" destination="bLS-TF-UHp" id="PXz-fI-l3Q"/>
                 <outlet property="imageView" destination="A1R-pz-tbm" id="mpW-bw-Ve5"/>
             </connections>
         </placeholder>
