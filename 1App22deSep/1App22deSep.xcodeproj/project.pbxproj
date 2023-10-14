@@ -19,6 +19,8 @@
 		BF47CC872AC78AA500AB1DEF /* ImageStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF47CC862AC78AA400AB1DEF /* ImageStackViewController.swift */; };
 		BF47CC892AC7C4C000AB1DEF /* TwitModallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF47CC882AC7C4BF00AB1DEF /* TwitModallViewController.swift */; };
 		BF587D142ABE8007003C25BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF587D132ABE8007003C25BC /* Assets.xcassets */; };
+		BF82943D2AD9FB8C00748B7F /* CaptionedImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF82943C2AD9FB8C00748B7F /* CaptionedImage.xib */; };
+		BF82943F2AD9FE6400748B7F /* CaptionedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF82943E2AD9FE6400748B7F /* CaptionedImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		BF47CC862AC78AA400AB1DEF /* ImageStackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStackViewController.swift; sourceTree = "<group>"; };
 		BF47CC882AC7C4BF00AB1DEF /* TwitModallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitModallViewController.swift; sourceTree = "<group>"; };
 		BF587D132ABE8007003C25BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF82943C2AD9FB8C00748B7F /* CaptionedImage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CaptionedImage.xib; sourceTree = "<group>"; };
+		BF82943E2AD9FE6400748B7F /* CaptionedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionedImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 				BF299D2E2ABE543F00B327A0 /* MySecondLaunchScreen.storyboard */,
 				BF47CC862AC78AA400AB1DEF /* ImageStackViewController.swift */,
 				BF47CC882AC7C4BF00AB1DEF /* TwitModallViewController.swift */,
+				BF8294402AD9FE8B00748B7F /* CaptionedImage */,
 			);
 			path = 1App22deSep;
 			sourceTree = "<group>";
@@ -134,6 +139,15 @@
 				BF299D212ABE4AFE00B327A0 /* _App22deSepUITestsLaunchTests.swift */,
 			);
 			path = 1App22deSepUITests;
+			sourceTree = "<group>";
+		};
+		BF8294402AD9FE8B00748B7F /* CaptionedImage */ = {
+			isa = PBXGroup;
+			children = (
+				BF82943C2AD9FB8C00748B7F /* CaptionedImage.xib */,
+				BF82943E2AD9FE6400748B7F /* CaptionedImage.swift */,
+			);
+			path = CaptionedImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +256,7 @@
 			files = (
 				BF299D0B2ABE4AFD00B327A0 /* LaunchScreen.storyboard in Resources */,
 				BF299D062ABE4AFB00B327A0 /* Main.storyboard in Resources */,
+				BF82943D2AD9FB8C00748B7F /* CaptionedImage.xib in Resources */,
 				BF587D142ABE8007003C25BC /* Assets.xcassets in Resources */,
 				BF299D2F2ABE543F00B327A0 /* MySecondLaunchScreen.storyboard in Resources */,
 			);
@@ -273,6 +288,7 @@
 				BF299CFF2ABE4AFB00B327A0 /* AppDelegate.swift in Sources */,
 				BF299D012ABE4AFB00B327A0 /* SceneDelegate.swift in Sources */,
 				BF47CC892AC7C4C000AB1DEF /* TwitModallViewController.swift in Sources */,
+				BF82943F2AD9FE6400748B7F /* CaptionedImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

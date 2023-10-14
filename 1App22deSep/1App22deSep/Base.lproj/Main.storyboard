@@ -188,18 +188,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="OR3-Jn-P23">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="OR3-Jn-P23">
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images-4" translatesAutoresizingMaskIntoConstraints="NO" id="N1s-0P-UAF">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="235"/>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images-2" translatesAutoresizingMaskIntoConstraints="NO" id="pHQ-J8-B8q">
-                                        <rect key="frame" x="0.0" y="240" width="393" height="235"/>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images-3" translatesAutoresizingMaskIntoConstraints="NO" id="OCA-Nf-AQR">
-                                        <rect key="frame" x="0.0" y="480" width="393" height="235"/>
-                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ACU-Md-9Lj" customClass="CaptionedImage" customModule="_App22deSep" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="238.33333333333334"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XTb-gy-K70" customClass="CaptionedImage" customModule="_App22deSep" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="238.33333333333331" width="393" height="238.33333333333331"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aW7-9o-VIH" customClass="CaptionedImage" customModule="_App22deSep" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="476.66666666666657" width="393" height="238.33333333333331"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -220,9 +223,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="firtImageView" destination="N1s-0P-UAF" id="Ys3-MO-8fI"/>
-                        <outlet property="secondImageView" destination="pHQ-J8-B8q" id="yFE-pn-0rf"/>
-                        <outlet property="thirdImageVIew" destination="OCA-Nf-AQR" id="h8Z-Sw-hty"/>
+                        <outlet property="firtCaptionedImageView" destination="ACU-Md-9Lj" id="zTr-mw-jyJ"/>
+                        <outlet property="secondCaptionedImageView" destination="XTb-gy-K70" id="JgR-LQ-c6Y"/>
+                        <outlet property="thirdCaptionedImageVIew" destination="aW7-9o-VIH" id="4UN-xF-eUk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uqS-Ni-77D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -243,7 +246,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Gxc-ib-MR5" secondAttribute="height" multiplier="2:1" id="REb-HQ-EFS"/>
                                 </constraints>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -343,7 +346,6 @@
         <image name="camera" catalog="system" width="128" height="93"/>
         <image name="images-2" width="287" height="175"/>
         <image name="images-3" width="275" height="183"/>
-        <image name="images-4" width="360" height="140"/>
         <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
