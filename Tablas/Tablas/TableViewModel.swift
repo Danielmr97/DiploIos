@@ -22,6 +22,9 @@ class TableViewModel{
         rowsArray = [Rows(title: "Pikachu", description: "Electrico"),Rows(title: "Charmander", description: "Fuego"),Rows(title: "Gengar", description: "Fantasmas"),Rows(title: "Dragonite", description: "Dragon")]
     }
     
+    func addRow(text :String){
+        rowsArray.append(Rows(title: text, description: ""))
+    }
     
     func getCountArray()-> Int{
         rowsArray.count
@@ -35,6 +38,15 @@ class TableViewModel{
         rowsArray[index.row].description
     }
     
+    func deleteRow(index : IndexPath){
+        rowsArray.remove(at: index.row)
+    }
     
+    func getSection() -> Int{
+        2
+    }
+    func getSectionTitle() -> String {
+        "Pokemon"
+    }
 }
 
