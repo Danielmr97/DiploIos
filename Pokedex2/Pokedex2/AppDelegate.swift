@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Pokedex2
+//  pokedex2
 //
-//  Created by Diplomado on 17/11/23.
+//  Created by Alejandro Mendoza on 17/11/23.
 //
 
 import UIKit

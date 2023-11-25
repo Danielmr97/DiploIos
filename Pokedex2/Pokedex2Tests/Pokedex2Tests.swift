@@ -1,14 +1,14 @@
 //
-//  Pokedex2Tests.swift
-//  Pokedex2Tests
+//  pokedex2Tests.swift
+//  pokedex2Tests
 //
-//  Created by Diplomado on 17/11/23.
+//  Created by Alejandro Mendoza on 17/11/23.
 //
 
 import XCTest
-@testable import Pokedex2
+@testable import pokedex2
 
-final class Pokedex2Tests: XCTestCase {
+final class pokedex2Tests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
