@@ -5,7 +5,6 @@
 //  Created by Alejandro Mendoza on 17/11/23.
 //
 
-import Foundation
 import UIKit
 
 protocol PokemonListViewModelDelegate: AnyObject {
@@ -18,7 +17,7 @@ class PokemonListViewModel {
     
     private var pokemonList: [Pokemon] = []
     private var filterPokemonList: [Pokemon] = []
-    private var favoritePokemonList : Set<Pokemon> = []
+    private var favoritePokemonList: Set<Pokemon> = []
     
     let pokemonCellIdentifier = "pokemonCell"
     
@@ -34,8 +33,10 @@ class PokemonListViewModel {
         loadData()
         loadFavoritePokemon()
         
-//        Nos avisa cuando esta pasando un evento
-        NotificationCenter.default.addObserver(self, selector: #selector(saveFavoritePokemonsaveFavoritePokemon), name: UIApplication.willResignActiveNotification, object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(saveFavoritePokemon),
+                                               name: UIApplication.willResignActiveNotification,
+                                               object: nil)
     }
     
     func pokemon(at indexPath: IndexPath) -> Pokemon {
@@ -58,6 +59,59 @@ class PokemonListViewModel {
         
     }
     
+    @objc
+    private func saveFavoritePokemon() {
+        // FileManager
+        guard let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            return
+        }
+        
+        let fileName = "favorite_pokemon_list.json"
+        let fileURL = documentDirectory.appending(path: fileName)
+        
+        do {
+            let favoritePokemonData = try JSONEncoder().encode(favoritePokemonList)
+            let jsonFavoritePokemon = String(data: favoritePokemonData, encoding: .utf8)
+            
+            try jsonFavoritePokemon?.write(to: fileURL, atomically: true, encoding: .utf8)
+        } catch {
+            // assertionFailure("cannot encode favorite pokemon data")
+        }
+    }
+    
+    private func loadFavoritePokemon() {
+        guard let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            return
+        }
+        
+        let fileName = "favorite_pokemon_list.json"
+        let favoritePokemonURL = documentDirectory.appending(path: fileName)
+        
+        do {
+            
+            let favoritePokemonData = try Data(contentsOf: favoritePokemonURL)
+            let favoritePokemonList = try JSONDecoder().decode(Set<Pokemon>.self, from: favoritePokemonData)
+            self.favoritePokemonList = favoritePokemonList
+            
+        } catch {
+//            assertionFailure("cannot read data from \(fileName)")
+        }
+    }
+    
+    
+    func isFavorite(pokemon: Pokemon) -> Bool {
+        favoritePokemonList.contains(pokemon)
+    }
+    
+    func pokemonName(at indexPath: IndexPath) -> String {
+        let pokemon = pokemon(at: indexPath)
+        if isFavorite(pokemon: pokemon) {
+            return pokemon.name + " ❤️"
+        } else {
+            return pokemon.name
+        }
+    }
+    
     func filterPokemon(with searchText: String) {
         defer {
             delegate?.shouldReloadTableData()
@@ -74,55 +128,10 @@ class PokemonListViewModel {
         }
     }
     
-    @objc
-    private func saveFavoritePokemonsaveFavoritePokemon(){
-        guard let documentDictionary = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {return}
-        let fileName = "favorite_pokemon_list.json"
-        let fileUrl = documentDictionary.appending(path: fileName)
-        do {
-            let favoritePokemonData = try JSONEncoder().encode(favoritePokemonList)
-            let jsonFavoritePokemon = String(data: favoritePokemonData, encoding: .utf8)
-            try jsonFavoritePokemon?.write(to: fileUrl, atomically: true, encoding: .utf8)
-        }catch{
-            assertionFailure("cannont encode favorite pokemon data")
-        }
-    }
-    
-    private func loadFavoritePokemon(){
-        guard let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-            return
-        }
-        let fileName = "favorite_pokemon_list.json"
-        let favoritePokemonURL = documentDirectory.appending(path: fileName)
-        do{
-            let favoritePokemonData = try Data(contentsOf: favoritePokemonURL)
-            let favoritePokemonLit = try JSONDecoder().decode(Set<Pokemon>.self, from: favoritePokemonData )
-            self.favoritePokemonList = favoritePokemonLit
-        }catch{
-            assertionFailure("Cannot find ")
-        }
-
-    }
-    
-    func addPokemonToFavorites(indexpath : IndexPath){
-        let favoritePokemon = filterPokemonList[indexpath.row]
+    func addPokemonToFavorites(indexPath: IndexPath) {
+        let favoritePokemon = filterPokemonList[indexPath.row]
         favoritePokemonList.insert(favoritePokemon)
         delegate?.shouldReloadTableData()
-        
-    }
-    
-    func isFavorite(pokemon : Pokemon) -> Bool{
-        favoritePokemonList.contains(pokemon)
-        
-    }
-    
-    func pokemonName(at indexPath : IndexPath) -> String{
-        let pokemon = pokemon(at : indexPath)
-        if isFavorite(pokemon: pokemon){
-            return pokemon.name + "🩷"
-        }else {
-            return pokemon.name
-        }
     }
 }
 

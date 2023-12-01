@@ -131,13 +131,11 @@ class PokemonLocationViewController: UIViewController {
 
 extension PokemonLocationViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-//        let render = MKPolygonRenderer(overlay: overlay)
         let render = MKPolylineRenderer(overlay: overlay)
         render.strokeColor = .cyan
         render.lineWidth = 8.0
         return render
     }
-
 }
 
 extension PokemonLocationViewController: PokemonLocationViewModelDelegate {

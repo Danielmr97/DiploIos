@@ -62,7 +62,6 @@ extension PokemonListTableViewController {
         
         return cell
     }
-    
 }
 
 // MARK: - tableview delegate
@@ -77,14 +76,17 @@ extension PokemonListTableViewController {
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let favoriteAction = UIContextualAction(style: .normal, title: "Add to favorites") { _, _, completion in
-            self.viewModel.addPokemonToFavorites(indexpath: indexPath)
+            self.viewModel.addPokemonToFavorites(indexPath: indexPath)
             completion(true)
         }
+        
         favoriteAction.backgroundColor = .red
         favoriteAction.image = UIImage(systemName: "heart")
+        
         return UISwipeActionsConfiguration(actions: [favoriteAction])
     }
 }
+
 
 //extension PokemonListTableViewController: UISearchBarDelegate {
 //    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Pokemon: Codable , Hashable {
+struct Pokemon: Codable, Hashable {
     struct Evolution: Codable {
         let name: String
         let num: String
@@ -45,6 +45,7 @@ struct Pokemon: Codable , Hashable {
     static func == (lhs: Pokemon, rhs: Pokemon) -> Bool {
         lhs.id == rhs.id
     }
+    
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }
